@@ -1,30 +1,19 @@
 
 ## Description
 
-[Solidity](https://docs.soliditylang.org/en/v0.8.4/) Smart contract language ETH.
-[Hardhat](https://hardhat.org/) framework Ethereum Platform
-
-Hardhat is an Ethereum development environment for professionals. It facilitates performing frequent tasks, such as running tests, automatically checking code for mistakes or interacting with a smart contract. Check out the [plugin list](https://hardhat.org/plugins/) to use it with your existing tools.
-
-Developed by [Nomic Labs](https://nomiclabs.io/) and funded by an Ethereum Foundation grant.
-
-Join [Hardhat Support Discord server](https://hardhat.org/discord) to stay up to date on new releases, plugins and tutorials.
+- This project will help you deploy, verify and public your smart contracts to etherscan
+### Step:
+    - Add your .sol file to contracts folder
+    - Write new scripts file to deploy your .sol
+    - Run script deploy
+    - Write arguments file which has params exactly match with your .sol constructor
+    - Prepare .env file at root
+    - Run script verify
 
 ## Installation
 
 ```bash
 $ npm install
-```
-
-## Test
-
-```bash
-# unit tests
-$ npx hardhat test
-
-# UT for each file test
-$ npx hardhat test PATH_TO_FILE
-
 ```
 
 ## Deploy
@@ -51,18 +40,6 @@ npx hardhat --network rinkeby ...
 1. Create new constructor params file in arguments folder
 2.
 ```bash
-npx hardhat --network rinkeby verify --constructor-args ./arguments/argNAPAToken.js DEPLOYED_CONTRACT_ADDRESS
+npx hardhat --network rinkeby verify --constructor-args ./arguments/deployArgs.js DEPLOYED_CONTRACT_ADDRESS
 ```
 More info about how to verify with complex arguments at [hardhat-etherscan](https://hardhat.org/plugins/nomiclabs-hardhat-etherscan.html)
-
-## Documentation
-
-On [Hardhat's website](https://hardhat.org) you will find:
-
-- [Guides to get started](https://hardhat.org/getting-started/)
-- [Hardhat Network](https://hardhat.org/hardhat-network/)
-- [Plugin list](https://hardhat.org/plugins/)
-
-## Happy buidling!
-
-👷‍♀️👷‍♂️👷‍♀️👷‍♂️👷‍♀️👷‍♂️👷‍♀️👷‍♂️👷‍♀️👷‍♂️👷‍♀️👷‍♂️👷‍♀️👷‍♂️
