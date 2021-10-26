@@ -10,6 +10,8 @@
     - Prepare .env file at root
     - Run script verify
 
+    - If you want to estimate gas, update file ./task/estimateGas.js and run script estimate gas below
+
 ## Installation
 
 ```bash
@@ -25,7 +27,13 @@ $ npx hardhat run ./scripts/*
 
 # deploy each file
 $ npx hardhat run ./scripts/deployNP.js
+```
 
+## Estimate gas
+
+```bash
+# estimate gas with gas price is 10 gwei
+npx hardhat h:estimate --gasprice 10
 ```
 
 ## Select network
@@ -43,3 +51,4 @@ npx hardhat --network rinkeby ...
 npx hardhat --network rinkeby verify --constructor-args ./arguments/deployArgs.js DEPLOYED_CONTRACT_ADDRESS
 ```
 More info about how to verify with complex arguments at [hardhat-etherscan](https://hardhat.org/plugins/nomiclabs-hardhat-etherscan.html)
+

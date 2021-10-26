@@ -4,7 +4,7 @@ require("@nomiclabs/hardhat-web3");
 require("@nomiclabs/hardhat-solhint");
 require("@nomiclabs/hardhat-etherscan");
 
-require('./task/deployNP');
+require('./task/estimateGas');
 
 require('dotenv').config();
 
@@ -13,13 +13,14 @@ const config = {
     defaultNetwork: "hardhat",
     networks: {
         hardhat: {
-            accounts: { count: 100 }
+            accounts: { count: 100 },
+            allowUnlimitedContractSize : true
         },
         rinkeby: {
             url: `https://rinkeby.infura.io/v3/${process.env.INFURA_API_KEY}`,
-            accounts: [`${process.env.PRIVATE_KEY}`]
+            accounts: [`${process.env.PRIVATE_KEY}`],
             // gas: 8100000,
-            // gasPrice: 8000000000
+            gasPrice: 8000000000
         },
         ropsten: {
             url: `https://ropsten.infura.io/v3/${process.env.INFURA_API_KEY}`,

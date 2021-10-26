@@ -6,6 +6,7 @@ describe("UT contract", function () {
         accounts = await web3.eth.getAccounts();
 
         admin = accounts[0]
+        user = accounts[1]
 
         npt = await NPT.new("NAPA Token", "NAPA", { from: admin });
 
@@ -15,16 +16,7 @@ describe("UT contract", function () {
         it("Check name", async () => {
             let name = await npt.name()
             assert.equal(name, "NAPA Token");
-
         });
 
-
     });
-
-
-
-
-
-
-
 });
